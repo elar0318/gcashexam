@@ -4,7 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//@ComponentScan({"com.gcash.exam.delivery"})
 public class DeliveryApplication {
 
     public static void main(String[] args) {
