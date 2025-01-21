@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: delivery
+
+calculate:
+  parcel:
+    rule:
+      reject:
+        weight: 50
+      heavy:
+        weight: 10
+        cost: 20
+      small:
+        volume: 1500
+        cost: 0.03
+      medium:
+        volume: 2500
+        cost: 0.04
+      large:
+        cost: 0.05
