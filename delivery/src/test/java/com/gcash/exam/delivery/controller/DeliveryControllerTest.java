@@ -36,8 +36,8 @@ class DeliveryControllerTest {
         mockMvc = MockMvcBuilders.standaloneSetup(deliveryController).build();
 
         // Sample requests
-        validParcelRequest = new ParcelRequest(10.0, 50.0, 30.0, 20.0);  // Valid request
-        invalidParcelRequest = new ParcelRequest(60.0, 50.0, 30.0, 20.0);  // Invalid request (Reject case)
+        validParcelRequest = new ParcelRequest(10.0, 50.0, 30.0, 20.0, "");  // Valid request
+        invalidParcelRequest = new ParcelRequest(60.0, 50.0, 30.0, 20.0, "");  // Invalid request (Reject case)
     }
 
     @Test

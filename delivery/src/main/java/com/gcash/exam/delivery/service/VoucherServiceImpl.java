@@ -18,7 +18,7 @@ public class VoucherServiceImpl implements VoucherService {
 
         log.info("Calling outbound API...");
 
-        VoucherResponse response = new VoucherResponse("MYNT", 5, "2020-01-30");
+        VoucherResponse response = new VoucherResponse(voucherCode, 5, "2020-01-30");
 
         log.info("Success response from outbound API...");
 

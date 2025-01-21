@@ -26,10 +26,10 @@ public class CalculateServiceImplTest {
     @BeforeEach
     void setUp() {
         // Prepare test data for different scenarios
-        validParcelRequest = new ParcelRequest(11.0, 50.0, 30.0, 20.0);
-        overweightParcelRequest = new ParcelRequest(60.0, 50.0, 30.0, 20.0);
-        smallVolumeParcelRequest = new ParcelRequest(5.0, 5.0, 5.0, 5.0);
-        mediumVolumeParcelRequest = new ParcelRequest(5.0, 15, 10, 15);
+        validParcelRequest = new ParcelRequest(11.0, 50.0, 30.0, 20.0, "");
+        overweightParcelRequest = new ParcelRequest(60.0, 50.0, 30.0, 20.0, "");
+        smallVolumeParcelRequest = new ParcelRequest(5.0, 5.0, 5.0, 5.0, "");
+        mediumVolumeParcelRequest = new ParcelRequest(5.0, 15, 10, 15, "");
     }
 
     @Test

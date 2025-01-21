@@ -50,9 +50,14 @@ public class CalculateServiceImpl implements CalculateService {
 
         // Calculate total cost
         double totalCostBeforeDisc = weightCost + volumeCost;
+        double totalCost = totalCostBeforeDisc;
 
-        double totalCost = voucherService.getVoucherDiscount(totalCostBeforeDisc, "MYNT");
+        if (!request.voucher().isEmpty()) {
+            log.info("Voucher is applied, computing discount price");
+            totalCost = voucherService.getVoucherDiscount(totalCostBeforeDisc, request.voucher());
+        }
 
+        log.info("Returning total cost");
         return TOTAL_STRING.concat(String.valueOf(totalCost));
 
     }
