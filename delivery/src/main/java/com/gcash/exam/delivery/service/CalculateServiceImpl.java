@@ -30,13 +30,12 @@ public class CalculateServiceImpl implements CalculateService {
             return WEIGHT_EXCEED;
         }
 
-        // Calculate the volume
         double volume = request.height() * request.width() * request.length();  // cm³
 
         // SECOND weight rule exceeds specified weight in config file, but not rejected
         double weightCost = 0;
         if (request.weight() > ruleConfiguration.getHeavy().weight()) {
-            weightCost = ruleConfiguration.getHeavy().cost() * request.weight();  // 20 * weight if weight > 10 kg
+            weightCost = ruleConfiguration.getHeavy().cost() * request.weight();
         }
 
         double volumeCost = ruleConfiguration.getLarge().cost() * volume; // default volume cost computation
